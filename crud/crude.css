@@ -1,0 +1,22 @@
+body{
+  text-align: center;
+  margin:0px;
+  padding: 0px;
+}
+.crud-container{
+  width: 60%;
+  margin-left: 15%;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.post{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.empty-text{
+  font-weight: bold;
+  color: red;
+}
