@@ -1,0 +1,33 @@
+body{
+  text-align: center;
+  margin-top: 50px;
+  margin: auto 20%;
+}
+.input-container{
+  display: grid;
+  grid-template-columns: 310px 175px 175px;
+  row-gap: 10px;
+  column-gap: 10px;
+  margin-top: 10px;
+}
+.text-items{
+  display: grid;
+  grid-template-columns: 200px 150px 150px 150px;
+  row-gap: 10px;
+  column-gap: 10px;
+  margin-top: 10px;
+}
+.btn-add{
+  font-size: 20px;
+  background-color: rgb(5, 114, 28);
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.btn{
+  font-size: 20px;
+  background-color: rgb(148, 5, 36);
+  color: white;
+  border-radius: 5px;
+  border: none;
+}

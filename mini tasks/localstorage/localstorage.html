@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+  <h1>Locat Storage</h1>
+  <p class="count"></p>
+
+  <script>
+    let items =
+      {
+      name:"Ali Haider",
+      Class: "10th",
+      age: 15,
+      'date-time': '10pm',
+    };
+    localStorage.setItem('name', 'Jahanzaib Mughal');
+    // localStorage.removeItem('name');
+
+   localStorage.setItem('key', JSON.stringify(items));
+   console.log(localStorage.getItem('key'));
+
+   let obj=JSON.parse(localStorage.getItem('key'));
+   console.log(obj);
+   console.log(obj.name); 
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.traversal-method-cotainer{
+background-color: rgb(146, 98, 7);
+width: 50%;
+margin: auto;
+padding: 35px;
+}
+.traversal-methods{
+background-color: blueviolet;
+padding: 10px;
+}
+.traversal-methods ol{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.traversal-methods ol li{
+  background-color: aliceblue;
+  padding: 10px;
+  font-size: 20px;
+}

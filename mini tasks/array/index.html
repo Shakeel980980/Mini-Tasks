@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+<body>
+  <h1>Arra </h1>
+  <ul>
+    <li>Arra.isarray();</li>
+    <li>length</li>
+    <li>push</li>
+    <li>pop</li>
+    <li>shift</li>
+    <li>unshift</li>
+    <li>splice</li>
+    <li>toString</li>
+    <li>sort</li>
+    <li>valueOf</li>
+  </ul>
+<pre> <h4>
+let numbers = ['apple','mango','banana','pineapple','orange'];
+console.log(numbers);
+
+console.log(Array.isArray(numbers)); // check this is array or not
+
+numbers.push(50); // add number at last index of array 
+console.log(numbers);
+
+numbers.pop(); // remove a number from the last index of array
+console.log(numbers);
+
+numbers.shift(); // remove data from 0 index;
+console.log(numbers);
+
+numbers.unshift(25); // add data at 0 index;
+console.log(numbers);
+
+numbers.splice(1, 2);  // remove data from 1 index to 2 index;
+console.log(numbers);
+
+numbers.toString(); // this provide us same copy of arary but if we change in one copy then automatically changed in second copy;
+console.log(numbers);
+
+numbers.sort(); // arrange data in assending order
+console.log(numbers);
+
+numbers.valueOf(); // get array itself
+console.log(numbers);
+
+console.log(fruits.join(' , '));
+</h4></pre>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+  <h1>JSON.parse</h1>
+  <h1>JSON.stringify</h1>
+  <script>
+    let items ={
+      name:"Ali Haider",
+      Class: "10th",
+      age: 15,
+      'date-time': '10pm',
+    };
+     let str =JSON.stringify(items); // it convert it into string not indivual objects;
+     console.log(str);
+     console.log(str.name); // it is undefined because it is string it cannot access individual objects
+     console.log(json['date-time']);// it is undefined because it is string it cannot access individual objects
+
+
+     let json = JSON.parse(str);// it convert it into string into object;
+     console.log(json);
+     console.log(json.name);// now we can access becasue it converted into objects;
+     console.log(json['date-time']);// now we can access becasue it converted into objects;
+
+  </script>
+</body>
+</html>
