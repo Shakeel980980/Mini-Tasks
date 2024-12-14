@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Methods</title>
+</head>
+<body>
+  <h1>Contains() Methods</h1>
+  <h1>hasAttribute() && hasChildNode()</h1>
+  <!-- 1-contain always provide True and False value
+       2- it is used to find id/class using parentElement from its childs -->
+       <!-- suppose -->
+       <div class="parent">
+          <p id="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam</p>
+       </div>
+      <!-- isequal -->
+      <h1>isequalNode()</h1>
+      <ul class="test-1">
+        <li>Orange</li>
+        <li class="abc">Apple</li>
+        <li>Pineapple</li>
+      </ul>
+      <ul class="test-2">
+        <li>Banana</li>
+        <li id="apple">Apple</li>
+        <li>Pineapple</li>
+      </ul>
+
+       <script>
+            let parent = document.querySelector(".parent");
+            let findId = document.querySelector("#child");
+            let contain =parent.contains(findId);
+            console.log(contain);
+
+            //hasAttribute() && hasChildNode()
+            let find = parent.hasAttribute("id");
+            console.log(find);
+
+            //isequalNode()
+            let testOne = document.querySelector(".test-1");
+            let testTwo = document.querySelector(".test-2");
+            
+            let equal = testOne.firstElementChild.isEqualNode(testTwo.firstElementChild);
+            console.log("First Node Compare", equal);
+
+            let equal2 = testOne.lastElementChild.isEqualNode(testTwo.lastElementChild);
+            console.log("Last Node Compare", equal2);
+            
+            let equal3 = testOne.children[2].isEqualNode(testTwo.children[2]);
+            console.log("Second Node Compare", equal3);
+       </script>
+</body>
+</htm

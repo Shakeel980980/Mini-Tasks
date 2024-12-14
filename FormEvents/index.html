@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Events</title>
+  <style>
+    input{
+      width: 200px;
+      font-size: 20px;
+    }
+    label{
+      font-weight: bold;
+      font-size: 18px;
+      color: red;
+    }
+    select{
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" onsubmit="submitFunction()">
+    First Name:<input type="text" name="fname" id="fname" class="input-1" 
+    onfocus="focusFunction(this)" 
+    onblur="onblurFunction(this)"
+    onchange="changeFunction(this)"
+    onselect="seletFunction(this)"
+    oninvalid="invalidFinction(this)"
+    required><br><br>
+    <span class="spanFname"></span><br><br>
+    
+    Second Name:<input type="text" name="sname" id="sname" class="input-2"
+    onfocus="focusFunction(this)"
+    onblur="onblurFunction(this)"
+    onchange="changeFunction(this)"
+    onselect="seletFunction(this)"
+    oninvalid="invalidFinction(this)"
+    required><br><br>
+    <span class="spanSname"></span>
+    <br>
+    <br>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <input type="submit">
+  </form>
+  <p>hello</p>
+  <script>
+      let fname = document.querySelector("#fname");
+    
+      function focusFunction(element){
+        element.style.background = "red";
+        element.value = element.value.toUpperCase();
+      }
+      function onblurFunction(element){   // onblure heighligh only selected input
+        element.style.background = "";
+      }
+      function changeFunction(e){
+        let x = e.value;
+        let p = document.querySelector("p");
+        p.innerHTML = x;
+      }
+      function seletFunction(e){
+        let x = e.value;
+        alert("Your text is selected is: " + x);
+      }
+      function submitFunction(){
+        alert("Your form has been submitted");
+      }
+      function invalidFinction(e){
+        let spanFname = document.querySelector(".spanFname");
+        let spanSname = document.querySelector(".spanSname");
+  
+        let input1 = document.querySelector(".input-1");
+        let input2 = document.querySelector(".input-2");
+        
+        if(input1.value == ""){
+          spanFname.innerHTML = `<b style="color:red;   text-transform: uppercase;">invalid wirte valid informations:</b>`;
+        }else{
+          spanFname.innerHTML = `<b style="color:green; text-transform: uppercase;">Successfully entered:</b>`;
+        }
+
+        if(input2.value == ""){
+          spanSname.innerHTML = `<b style="color:red;   text-transform: uppercase;">invalid wirte valid informations:</b>`;
+        }else{
+          spanSname.innerHTML = `<b style="color:green; text-transform: uppercase;">Successfully entered:</b>`;
+        }
+      }
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
